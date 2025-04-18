@@ -1,8 +1,7 @@
 const pg = require(`pg`);
 // configure database connection
-const client = new pg.Client(
-  `postgres://joshc:Vegas0623@localhost:5432/acme_ice_cream_db`
-);
+// Import and configure dotenv to load variables from .env file
+require("dotenv").config();
 
 // SQL query to create the table
 const createTableQuery = `

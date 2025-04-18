@@ -5,9 +5,7 @@ const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
-const client = new pg.Client(
-  "postgres://joshc:Vegas0623@localhost:5432/acme_ice_cream_db"
-);
+require("dotenv").config();
 
 // PUT - Update a flavor by ID
 app.put("/api/flavors/:id", async (req, res, next) => {
